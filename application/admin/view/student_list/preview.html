@@ -1,0 +1,51 @@
+{extend name='base'/}
+{block name="content"}
+<div>
+
+    <ul class="nav nav-tabs" role="tablist">
+
+        <li>
+            <a href="{:url('admin/StudentList/index')}">报名列表</a>
+        </li>
+        <li class="active">
+            <a href="javascript:;">预览信息</a>
+        </li>
+    </ul>
+    <form id="navigate" class="form-horizontal">
+        <!--<input type="hidden" name="csrf_token" value="547d8d197baef66f188c2f3d329a85d8">-->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                学生信息
+            </div>
+            <div class="panel-body" style="margin:20px">
+                <h3 style="text-align: center">2018年广西成人高校招人报名信息表</h3>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label star">职位名称:</label>
+                    <div class="col-sm-2 control-label">
+                        <p style="float: left;">黄小明</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label star">职位名称:</label>
+                    <div class="col-sm-6 control-label">
+                        <p style="float: left;">黄小明</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label star">职位名称:</label>
+                    <div class="col-sm-6 control-label">
+                        <p style="float: left;">黄小明</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </form>
+    <!--<button type="submit" class="btn btn-default">保存修改</button>-->
+    <script>
+        require(['hdjs'],function(hdjs){
+            hdjs.bootstrapswitch('.bootstrap-switch');
+        })
+    </script>
+</div>
+{/block}
