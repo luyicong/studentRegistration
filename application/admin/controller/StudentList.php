@@ -39,4 +39,9 @@ class StudentList extends Controller
 
         return $this->fetch();
     }
+
+    public function createpdf(){
+
+        $this->pdf();
+    }
 }
