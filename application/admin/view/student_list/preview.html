@@ -17,76 +17,72 @@
             <div class="panel-heading">
                 学生信息
             </div>
-            <a href="{:url('admin/StudentList/createpdf')}">报名列表</a>
+            <!--<a href="{:url('admin/StudentList/createpdf')}">报名列表</a>-->
             <div class="panel-body" style="margin:20px">
                 <div class="user_info_table">
-                    <h3 style="text-align: center;">2018年广西成人高校招人报名信息表</h3>
+                    <h3 style="text-align: center;width:1000px;margin-bottom: 20px;">广西成人高校招人报名信息表</h3>
                     <div class="table_body">
                         <div class="info_row">
-                            <div class="info_row_title">报名号：</div>
-                            <div class="info_row_val">2018001</div>
-                            <div class="info_row_title" style="width:150px;">姓名：</div>
-                            <div class="info_row_val" style="width:150px;">黄小明</div>
-                            <div class="info_row_title">性别：</div>
-                            <div class="info_row_val" style="width:190px">男</div>
+                            <div class="info_row_title">姓名：</div>
+                            <div class="info_row_val">{$user_info.name}</div>
+                            <div class="info_row_title" style="width:150px;">性别：</div>
+                            <div class="info_row_val" style="width:150px;">{$user_info.sex}</div>
+                            <div class="info_row_title">民族：</div>
+                            <div class="info_row_val" style="width:190px">{$user_info.nation}</div>
                         </div>
 
                         <div class="info_row">
                             <div class="info_row_title">身份证号：</div>
-                            <div class="info_row_val" style="width:500px;">454545454545788887545878978979</div>
-                            <div class="info_row_title">民族：</div>
-                            <div class="info_row_val" style="width:190px">汉</div>
+                            <div class="info_row_val" style="width:500px;">{$user_info.id_number}</div>
+                            <div class="info_row_title">文化程度：</div>
+                            <div class="info_row_val" style="width:190px">{$user_info.education}</div>
                         </div>
 
                         <div class="info_row">
                             <div class="info_row_title">出生年月日：</div>
-                            <div class="info_row_val" style="width:500px;">1993年01月10日</div>
+                            <div class="info_row_val" style="width:500px;">{$user_info.birthy}</div>
                             <div class="info_row_title">政治面貌：</div>
-                            <div class="info_row_val" style="width:190px">团员</div>
+                            <div class="info_row_val" style="width:190px">{$user_info.political}</div>
                         </div>
 
                         <div class="info_row">
                             <div class="info_row_title">毕业院校及专业：</div>
-                            <div class="info_row_val" style="width:500px;">454545454545788887545878978979</div>
+                            <div class="info_row_val" style="width:500px;">{$user_info.university}</div>
                             <div class="info_row_title">毕业年月：</div>
-                            <div class="info_row_val" style="width:190px">2015年6月</div>
+                            <div class="info_row_val" style="width:190px">{$user_info.graduation_date}</div>
                         </div>
 
                         <div class="info_row">
                             <div class="info_row_title">录取通知书寄达地址：</div>
-                            <div class="info_row_val" style="width:500px;">广西南宁市青秀区南湖公园10号</div>
+                            <div class="info_row_val" style="width:500px;">{$user_info.mailing_address}</div>
                             <!--<div class="info_row_title">民族：</div>-->
                             <!--<div class="info_row_val">黄小明</div>-->
                         </div>
 
                         <div class="info_row">
-                            <div class="info_row_title">联系电话：</div><div class="info_row_val">18076640435</div>
-                            <div class="info_row_title" style="min-width:100px;">邮政编码：</div><div class="info_row_val" style="width:150px;">000000</div>
-                            <div class="info_row_title">招生类别：</div><div class="info_row_val" style="width:190px">统一考试</div>
+                            <div class="info_row_title">联系电话：</div><div class="info_row_val">{$user_info.phone}</div>
+                            <div class="info_row_title" style="min-width:100px;">邮政编码：</div><div class="info_row_val" style="width:150px;">{$user_info.postal_code}</div>
+                            <div class="info_row_title">QQ号码：</div><div class="info_row_val" style="width:190px">{$user_info.qq}</div>
                         </div>
 
                         <div class="info_row">
+                            <div class="info_row_title">其他联系电话：</div>
+                            <div class="info_row_val" style="width:200px;">{$user_info.other_phone}</div>
                             <div class="info_row_title">现工作单位：</div>
-                            <div class="info_row_val" style="width:500px;">广西南宁市青秀区南湖公园10号</div>
+                            <div class="info_row_val" style="width:498px;">{$user_info.working_unit}</div>
                             <!--<div class="info_row_title">民族：</div>-->
                             <!--<div class="info_row_val">黄小明</div>-->
                         </div>
 
                         <div class="info_row">
-                            <div class="info_row_title">职业类别：</div><div class="info_row_val"></div>
-                            <div class="info_row_title" style="min-width:100px;">工作年月：</div><div class="info_row_val">2015年1月</div>
+                            <div class="info_row_title">报考院校：</div><div class="info_row_val">广西民族大学</div>
+                            <div class="info_row_title" style="min-width:100px;">报考专业：</div><div class="info_row_val">计算机与科学技术</div>
                             <!--<div class="info_row_title">招生类别：</div><div class="info_row_val" style="width:190px">统一考试</div>-->
                         </div>
 
-                        <div class="info_row">
-                            <div class="info_row_title">文化程度：</div><div class="info_row_val">大专</div>
-                            <div class="info_row_title" style="min-width:100px;">报考科类：</div><div class="info_row_val"></div>
-                            <!--<div class="info_row_title">招生类别：</div><div class="info_row_val" style="width:190px">统一考试</div>-->
-                        </div>
-
-                        <div class="info_row"  style="height:108px;">
-                            <div class="info_row_title group_title" style="height:120px;text-align: center;padding-top: 30px;">家庭主要成员及社会关系</div>
-                            <div class="group_body">
+                        <div class="info_row"  style="height:72px;">
+                            <div class="info_row_title group_title" style="height:72px;text-align: center;padding-top: 5px;line-height:30px">家庭主要成员及社会关系</div>
+                            <div class="group_body" style="height:72px;">
                                 <div class="group_body_row">
                                     <div style="width:201px;">姓名</div>
                                     <div style="width:149px;">与本人关系</div>
@@ -95,27 +91,14 @@
                                 </div>
 
                                 <div class="group_body_row">
-                                    <div style="width:201px;">XXXX</div>
-                                    <div style="width:149px;">兄弟</div>
-                                    <div style="width:300px;"></div>
-                                    <div style="width:198px;border-right: none">18888888888</div>
+                                    <div style="width:201px;">{$user_info.family_member[0]}</div>
+                                    <div style="width:149px;">{$user_info.family_member[1]}</div>
+                                    <div style="width:300px;">{$user_info.family_member[2]}</div>
+                                    <div style="width:198px;border-right: none">{$user_info.family_member[3]}</div>
                                 </div>
 
-                                <div class="group_body_row">
-                                    <div style="width:201px;">XXXX</div>
-                                    <div style="width:149px;">兄弟</div>
-                                    <div style="width:300px;"></div>
-                                    <div style="width:198px;border-right: none">18888888888</div>
-                                </div>
                             </div>
 
-                        </div>
-
-                        <div class="info_row">
-                            <div class="info_row_title">报考专业：</div>
-                            <div class="info_row_val" style="width:500px;">计算机与科学技术</div>
-                            <!--<div class="info_row_title">民族：</div>-->
-                            <!--<div class="info_row_val">黄小明</div>-->
                         </div>
 
                         <div class="info_row" style="text-align: center;border-left: 1px solid #666;line-height: 40px;">本人简历</div>
@@ -125,35 +108,43 @@
                         </div>
 
                         <div class="info_row">
-                            <div class="info_row_title" style="width:350px;text-align: center;">2012年9月至2015年6月</div>
-                            <div class="info_row_val" style="width:649px;text-align: center;">广西民族大学</div>
+                            <div class="info_row_title" style="width:350px;text-align: center;">{$user_info.resume_1[0]}</div>
+                            <div class="info_row_val" style="width:649px;text-align: center;">{$user_info.resume_1[1]}</div>
                         </div>
                         <div class="info_row">
-                            <div class="info_row_title" style="width:350px;text-align: center;">2015年9月至2018年6月</div>
-                            <div class="info_row_val" style="width:649px;text-align: center;">广西大学</div>
+                            <div class="info_row_title" style="width:350px;text-align: center;">{$user_info.resume_2[0]}</div>
+                            <div class="info_row_val" style="width:649px;text-align: center;">{$user_info.resume_2[1]}</div>
+                        </div>
+
+                        <!--<div class="info_row">-->
+                            <!--<div class="info_row_title">考试地点：</div>-->
+                            <!--<div class="info_row_val" style="width:500px;">广西南宁市广西民族大学</div>-->
+                        <!--</div>-->
+
+                        <!--<div class="info_row">-->
+                            <!--<div class="info_row_title">缴费金额（元）：</div><div class="info_row_val">100</div>-->
+                            <!--<div class="info_row_title" style="min-width:100px;">缴费状态：</div><div class="info_row_val">未缴费</div>-->
+                            <!--&lt;!&ndash;<div class="info_row_title">招生类别：</div><div class="info_row_val" style="width:190px">统一考试</div>&ndash;&gt;-->
+                        <!--</div>-->
+                        <div class="info_row">
+                            <div class="info_row_title">报考金额：</div>
+                            <div class="info_row_val" style="width:199px;">{$user_info.charge}</div>
+                            <div class="info_row_title" style="width:150px;">缴费状态：</div>
+                            <div class="info_row_val" style="width:150px;">{$user_info.charge_status}</div>
+                            <div class="info_row_title">时间：</div>
+                            <div class="info_row_val" style="width:190px">{$user_info.date}</div>
                         </div>
 
                         <div class="info_row">
-                            <div class="info_row_title">考试地点：</div>
-                            <div class="info_row_val" style="width:500px;">广西南宁市广西民族大学</div>
-                        </div>
-
-                        <div class="info_row">
-                            <div class="info_row_title">缴费金额（元）：</div><div class="info_row_val">100</div>
-                            <div class="info_row_title" style="min-width:100px;">缴费状态：</div><div class="info_row_val">未缴费</div>
+                            <div class="info_row_title">成人高考地点：</div><div class="info_row_val" style="width:199px;">{$user_info.test_site}</div>
+                            <div class="info_row_title" style="min-width:100px;">备注：</div>{$user_info.remarks}</div>
                             <!--<div class="info_row_title">招生类别：</div><div class="info_row_val" style="width:190px">统一考试</div>-->
                         </div>
 
-                        <div class="info_row">
-                            <div class="info_row_title">学生确认：</div><div class="info_row_val">黄小明</div>
-                            <div class="info_row_title" style="min-width:100px;">时间：</div><div class="info_row_val">2018年2月24日</div>
-                            <!--<div class="info_row_title">招生类别：</div><div class="info_row_val" style="width:190px">统一考试</div>-->
-                        </div>
-
-                        <div class="info_row">
-                            <div class="info_row_title">备注：</div>
-                            <div class="info_row_val" style="width:500px;"></div>
-                        </div>
+                        <!--<div class="info_row">-->
+                            <!--<div class="info_row_title">备注：</div>-->
+                            <!--<div class="info_row_val" style="width:500px;"></div>-->
+                        <!--</div>-->
 
                     </div>
                 </div>
@@ -164,10 +155,11 @@
         .user_info_table{
             width: 1200px;
             overflow: hidden;
+            padding:20px 0 300px 30px;
         }
         .table_body{
             width: 1000px;
-            margin: 20px 100px;
+            /*margin: 20px 0;*/
             /*border:1px solid #666;*/
         }
         .info_row{
@@ -181,7 +173,7 @@
         }
         .info_row > div{
             float: left;
-            min-height: 36px;
+            height: 36px;
             line-height: 36px;
         }
         .info_row_title{
@@ -194,6 +186,7 @@
         .info_row_val{
             width:200px ;
             text-indent: 6px;
+            box-sizing: border-box;
         }
 
         .info_row_title.group_title{
