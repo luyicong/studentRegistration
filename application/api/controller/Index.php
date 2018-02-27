@@ -5,11 +5,14 @@ class Index
 {
     public function index()
     {
-        $user = db('user')->select();
-        $cates = db('cate')->select();
-        $companys = db('company')->select();
-        $poss = db('position')->select();
-        $userResume = db('resume')->select();
-        halt($poss);
+        $data = input('post.');
+
+//        halt($data);
+        $query = db('user')->insert($data);
+        if($query){
+            return  show(1, '恭喜您，报名成功！', [], 200);
+        }else{
+            return  show(0, '抱歉，网络出错了，稍后重试！', [], 200);
+        }
     }
 }

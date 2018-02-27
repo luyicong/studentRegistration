@@ -115,10 +115,22 @@
             padding-top: 10px;
         }
         .footer p{
+            width: 100%;
             height: 26px;
             line-height: 26px;
             text-align: center;
             font-size: 14px;
+        }
+        .footer p span {
+            width: 50%;
+            display: block;
+            float: left;
+        }
+        .footer p span:first-child{
+            text-align: right;
+        }
+        .footer p span:last-child{
+            text-align: left;
         }
         .submit_btn{
             width: 100%;
@@ -139,7 +151,8 @@
         <div class="header">
             <h2>2018年成人高考报名信息表</h2>
         </div>
-        <div class="form_wrap">
+        <form id="form">
+            <div class="form_wrap">
             <div class="form_item">
                 <div class="form_item_title is_require">姓名：</div>
                 <div class="form_item_content">
@@ -149,15 +162,15 @@
             <div class="form_item">
                 <div class="form_item_title is_require">性别：</div>
                 <div class="form_item_content">
-                    <!--<input class="text_input" type="text" placeholder="姓名">-->
-                    <div class="input_item" style="width:50px;">
-                        <input class="radio_sel" type="radio" id="male" name="sex" checked="checked" />
-                        <label for="male">男</label>
-                    </div>
-                    <div class="input_item" style="width:50px;">
-                        <input class="radio_sel" type="radio" id="female" name="sex" />
-                        <label for="female">女</label>
-                    </div>
+                    <input class="text_input" type="text" name="sex" placeholder="性别">
+                    <!--<div class="input_item" style="width:50px;">-->
+                        <!--<input class="radio_sel" type="radio" id="male" name="sex" value="男"/>-->
+                        <!--<label for="male">男</label>-->
+                    <!--</div>-->
+                    <!--<div class="input_item" style="width:50px;">-->
+                        <!--<input class="radio_sel" type="radio" id="female" name="sex" value="女"/>-->
+                        <!--<label for="female">女</label>-->
+                    <!--</div>-->
 
                 </div>
             </div>
@@ -200,7 +213,7 @@
             <div class="form_item">
                 <div class="form_item_title is_require">毕业年月：</div>
                 <div class="form_item_content">
-                    <input class="text_input" type="month" />
+                    <input class="text_input" name="graduation_date" type="month" />
                     <!--<input class="text_input" type="text" placeholder="毕业院校及专业">-->
                 </div>
             </div>
@@ -259,25 +272,25 @@
                     <div class="form_item">
                         <div class="form_item_title is_require">姓名：</div>
                         <div class="form_item_content">
-                            <input class="text_input" type="text" placeholder="姓名">
+                            <input class="text_input" type="text" name="family_member_name" placeholder="姓名">
                         </div>
                     </div>
                     <div class="form_item">
                         <div class="form_item_title is_require">与本人关系：</div>
                         <div class="form_item_content">
-                            <input class="text_input" type="text" placeholder="与本人关系">
+                            <input class="text_input" type="text" name="family_member_with" placeholder="与本人关系">
                         </div>
                     </div>
                     <div class="form_item">
                         <div class="form_item_title is_require">工作单位：</div>
                         <div class="form_item_content">
-                            <input class="text_input" type="text" placeholder="工作单位">
+                            <input class="text_input" type="text" name="family_member_work_unit" placeholder="工作单位">
                         </div>
                     </div>
                     <div class="form_item">
                         <div class="form_item_title is_require">联系电话：</div>
                         <div class="form_item_content">
-                            <input class="text_input" type="text" placeholder="联系电话">
+                            <input class="text_input" type="text" name="family_member_contact" placeholder="联系电话">
                         </div>
                     </div>
                 </div>
@@ -289,46 +302,60 @@
                     <div class="form_item">
                         <div class="form_item_title is_require">起始年月1：</div>
                         <div class="form_item_content">
-                            <input class="text_input" style="width: 45%;" type="month" placeholder="开始年月">
+                            <input class="text_input" name="re_1_start_time" style="width: 45%;" type="month"  placeholder="开始年月">
                             至
-                            <input class="text_input" style="width: 45%;"  type="month" placeholder="结束年月">
+                            <input class="text_input" name="re_1_end_time" style="width: 45%;"  type="month" placeholder="结束年月">
                         </div>
                     </div>
                     <div class="form_item">
                         <div class="form_item_title is_require">在何校何地学习工作1：</div>
                         <div class="form_item_content">
-                            <input class="text_input" type="text" placeholder="在何校何地学习工作1">
+                            <input class="text_input" type="text" name="re_1_work_address" placeholder="在何校何地学习工作1">
                         </div>
                     </div>
                     <div class="form_item">
                         <div class="form_item_title is_require">起始年月2：</div>
                         <div class="form_item_content">
                             <!--<input class="text_input" type="text" placeholder="起始年月2">-->
-                            <input class="text_input" style="width: 45%;" type="month" placeholder="开始年月">
+                            <input class="text_input" name="re_2_start_time" style="width: 45%;" type="month" placeholder="开始年月">
                             至
-                            <input class="text_input" style="width: 45%;"  type="month" placeholder="结束年月">
+                            <input class="text_input" name="re_2_end_time" style="width: 45%;"  type="month" placeholder="结束年月">
                         </div>
                     </div>
                     <div class="form_item">
                         <div class="form_item_title is_require">在何校何地学习工作2：</div>
                         <div class="form_item_content">
-                            <input class="text_input" type="text" placeholder="在何校何地学习工作2">
+                            <input class="text_input" name="re_2_work_address" type="text" placeholder="在何校何地学习工作2">
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div class="form_item">
+                <div class="form_item_title is_require">报考金额(元)：</div>
+                <div class="form_item_content">
+                    <input class="text_input" type="text" name="charge" value="100" placeholder="" disabled style="background-color:#ccc">
                 </div>
             </div>
 
             <div class="form_item">
                 <div class="form_item_title is_require">成人高考地点：</div>
                 <div class="form_item_content">
-                    <input class="text_input" type="text" placeholder="成人高考地点">
+                    <input class="text_input" type="text" name="test_site" placeholder="成人高考地点">
                 </div>
             </div>
 
             <div class="form_item">
-                <div class="form_item_title is_require">备注：</div>
+                <div class="form_item_title is_require">今天日期：</div>
                 <div class="form_item_content">
-                    <textarea class="text_textarea" rows="5" cols="20" placeholder="备注"></textarea>
+                    <input class="text_input" type="date" name="date" placeholder="今天日期">
+                </div>
+            </div>
+
+            <div class="form_item">
+                <div class="form_item_title">备注：</div>
+                <div class="form_item_content">
+                    <textarea class="text_textarea" rows="5" cols="20" name="remarks" placeholder="备注"></textarea>
                 </div>
             </div>
 
@@ -337,11 +364,170 @@
             </div>
 
         </div>
+        </form>
         <div class="footer">
-            <!--<p>隆安县励志文化教育培训学校</p>-->
-            <p>地址：隆安县城厢镇城西路37号</p>
-            <p>电话：13878146579</p>
+            <p><span>联系人：</span><span>舒清源老师</span></p>
+            <p><span>手机（微信同号）：</span><span>13878146579</span></p>
+            <p><span>QQ号：</span><span>2548235108</span></p>
         </div>
     </div>
 </body>
+<script src="__STATIC__/js/jquery-3.3.1.min.js"></script>
+<script>
+$(function(){
+    $('.submit_btn').click(function(){
+
+        var obj = {
+            'name':getVal('name'),
+            'sex':getVal('sex'),
+            'id_number':getVal('id_number'),
+            'nation':getVal('nation'),
+            'birthy':getVal('birthy'),
+            'political':getVal('political'),
+            'university':getVal('university'),
+            'graduation_date':getVal('graduation_date'),
+            'mailing_address':getVal('mailing_address'),
+            'phone':getVal('phone'),
+            'working_unit':getVal('working_unit'),
+            'postal_code':getVal('postal_code'),
+            'qq':getVal('qq'),
+            'other_phone':getVal('other_phone'),
+            'education':getVal('education'),
+            'school':getVal('school'),
+            'major':getVal('major'),
+            'test_site':getVal('test_site'),
+            'charge':getVal('charge'),
+            'date':getVal('date'),
+            'family_member':getVal('family_member_name')+','+getVal('family_member_with')+','+getVal('family_member_work_unit')+','+getVal('family_member_contact'),
+            'resume_1':getVal('re_1_start_time')+'至'+getVal('re_1_end_time')+','+getVal('re_1_work_address'),
+            'resume_2':getVal('re_2_start_time')+'至'+getVal('re_2_end_time')+','+getVal('re_2_work_address')
+        }
+        // console.log(obj);
+        if(!obj.name) {
+            alert('姓名不能为空！');
+            return false;
+        }
+        if(!obj.sex) {
+            alert('性别不能为空！');
+            return false;
+        }
+        if(!obj.id_number) {
+            alert('请填写身份证号码！');
+            return false;
+        }
+        if(!obj.nation) {
+            alert('民族不能为空！');
+            return false;
+        }
+        if(!obj.birthy) {
+            alert('请选择出生年月日！');
+            return false;
+        }
+        if(!obj.political) {
+            alert('政治面貌不能为空！');
+            return false;
+        }
+        if(!obj.university) {
+            alert('毕业院校及专业不能为空！');
+            return false;
+        }
+        if(!obj.graduation_date) {
+            alert('毕业时间不能为空！');
+            return false;
+        }
+        if(!obj.mailing_address) {
+            alert('录取通知书寄达地址不能为空！');
+            return false;
+        }
+        if(!obj.phone) {
+            alert('联系电话不能为空！');
+            return false;
+        }
+        if(!obj.working_unit) {
+            alert('工作单位不能为空！');
+            return false;
+        }
+        if(!obj.postal_code) {
+            alert('邮政编号不能为空！');
+            return false;
+        }
+        if(!obj.qq) {
+            alert('qq号不能为空！');
+            return false;
+        }
+        if(!obj.other_phone) {
+            alert('其他联系方式不能为空！');
+            return false;
+        }
+        if(!obj.education) {
+            alert('教育程度不能为空！');
+            return false;
+        }
+        if(!obj.school) {
+            alert('报考院校不能为空！');
+            return false;
+        }
+        if(!obj.major) {
+            alert('报考专业不能为空！');
+            return false;
+        }
+        if(!obj.test_site) {
+            alert('成人高考地点不能为空！');
+            return false;
+        }
+        if(!getVal('family_member_name') || !getVal('family_member_with') || !getVal('family_member_work_unit') || !getVal('family_member_contact')) {
+            // console.log()
+            alert('家庭成员关系必须填写完整！');
+            return false;
+        }
+        if(!getVal('re_1_start_time') || !getVal('re_1_end_time') || !getVal('re_1_work_address')) {
+            alert('个人简历1必须填写完整！');
+            return false;
+        }
+        if(!getVal('re_2_start_time') || !getVal('re_2_end_time') || !getVal('re_2_work_address')) {
+            alert('个人简历2必须填写完整！');
+            return false;
+        }
+
+        if(!obj.test_site) {
+            alert('成人高考地点不能为空！');
+            return false;
+        }
+        if(!obj.date){
+            alert('今天日期不能为空！');
+            return false;
+        }
+        console.log(obj);
+
+        $.post("/api/index",obj,
+            function(data){
+               if(data.status == 1){
+                   alert(data.message);
+                   window.location.reload()
+               }else{
+                   alert(data.message);
+                   return false
+               }
+            });
+        // console.log($("#form").serialize())
+    })
+
+
+
+    function getVal(name) {
+        // var sex = '';
+        // if(name == 'sex'){
+        //     $('.radio_sel').each(function(item){
+        //         if(item.checked){
+        //             console.log(item)
+        //             sex = item.val()
+        //         }
+        //     })
+        //     return sex;
+        // }else{
+            return $('input[name='+name+']').val();
+        // }
+    }
+});
+</script>
 </html>
