@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
     <title>2018年成人高考考试报名</title>
+
     <style>
         *{padding:0;margin:0}
         input,textarea{
@@ -145,6 +146,7 @@
             font-size: 14px;
         }
     </style>
+    <!--<link href="__STATIC__/css/sm.min.css" rel="stylesheet">-->
 </head>
 <body>
     <div class="index_page">
@@ -300,7 +302,7 @@
                 <div class="form_item_title is_require">本人简历：</div>
                 <div class="form_item_content" style="padding:0 15px;">
                     <div class="form_item">
-                        <div class="form_item_title is_require">起始年月1：</div>
+                        <div class="form_item_title is_require">起始年月：</div>
                         <div class="form_item_content">
                             <input class="text_input" name="re_1_start_time" style="width: 45%;" type="month"  placeholder="开始年月">
                             至
@@ -308,13 +310,13 @@
                         </div>
                     </div>
                     <div class="form_item">
-                        <div class="form_item_title is_require">在何校何地学习工作1：</div>
+                        <div class="form_item_title is_require">在何校学习：</div>
                         <div class="form_item_content">
-                            <input class="text_input" type="text" name="re_1_work_address" placeholder="在何校何地学习工作1">
+                            <input class="text_input" type="text" name="re_1_work_address" placeholder="在何校学习">
                         </div>
                     </div>
                     <div class="form_item">
-                        <div class="form_item_title is_require">起始年月2：</div>
+                        <div class="form_item_title is_require">起始年月：</div>
                         <div class="form_item_content">
                             <!--<input class="text_input" type="text" placeholder="起始年月2">-->
                             <input class="text_input" name="re_2_start_time" style="width: 45%;" type="month" placeholder="开始年月">
@@ -323,20 +325,20 @@
                         </div>
                     </div>
                     <div class="form_item">
-                        <div class="form_item_title is_require">在何校何地学习工作2：</div>
+                        <div class="form_item_title is_require">在何地工作：</div>
                         <div class="form_item_content">
-                            <input class="text_input" name="re_2_work_address" type="text" placeholder="在何校何地学习工作2">
+                            <input class="text_input" name="re_2_work_address" type="text" placeholder="在何地工作">
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="form_item">
-                <div class="form_item_title is_require">报考金额(元)：</div>
-                <div class="form_item_content">
-                    <input class="text_input" type="text" name="charge" value="100" placeholder="" disabled style="background-color:#ccc">
-                </div>
-            </div>
+            <!--<div class="form_item">-->
+                <!--<div class="form_item_title is_require">报考金额(元)：</div>-->
+                <!--<div class="form_item_content">-->
+                    <!--<input class="text_input" type="text" name="charge" value="100" placeholder="" disabled style="background-color:#ccc">-->
+                <!--</div>-->
+            <!--</div>-->
 
             <div class="form_item">
                 <div class="form_item_title is_require">成人高考地点：</div>
@@ -373,6 +375,8 @@
     </div>
 </body>
 <script src="__STATIC__/js/jquery-3.3.1.min.js"></script>
+<!--<script src="__STATIC__/js/zepto.min.js"></script>-->
+<!--<script src="__STATIC__/js/sm.min.js"></script>-->
 <script>
 $(function(){
     $('.submit_btn').click(function(){
