@@ -10,12 +10,12 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
     <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css?version=v2.0.9" rel="stylesheet">
     <link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css?version=v2.0.9" rel="stylesheet">
-    <link rel="stylesheet" href="/resource/css/hdcms.css?version=v2.0.9">
-    <link rel="stylesheet" href="/resource/hdjs/dist/static/css/hdjs.css?version=v2.0.9">
+    <link rel="stylesheet" href="__STATIC__/resource/css/hdcms.css?version=v2.0.9">
+    <link rel="stylesheet" href="__STATIC__/resource/hdjs/dist/static/css/hdjs.css?version=v2.0.9">
     <script>
         //HDJS组件需要的配置
         window.hdjs = {
-            'base': 'http://cms.yoho167.com/resource/hdjs/',
+            'base': '__STATIC__/resource/hdjs/',
             'uploader': 'http://cms.yoho167.com/index.php?s=component/upload/uploader&m=article&siteid=2',
             'filesLists': 'http://cms.yoho167.com/index.php?s=component/upload/filesLists&m=article&siteid=2',
             'removeImage': 'http://cms.yoho167.com/index.php?s=component/upload/removeImage&m=article&siteid=2',
@@ -24,7 +24,7 @@
         window.system = {
             attachment: "/attachment",
             root: "http://cms.yoho167.com",
-            url: "http://cms.yoho167.com/index.php?s=site/navigate/lists&entry=home&m=article&siteid=2&mark=article&mi=92&mt=",
+            url: "/index.php?s=site/navigate/lists&entry=home&m=article&siteid=2&mark=article&mi=92&mt=",
             siteid: "2",
             module: "article",
             //用于上传等组件使用标识当前是后台用户
@@ -36,18 +36,18 @@
             }
         }
     </script>
-    <script src="http://cms.yoho167.com/resource/hdjs/dist/static/requirejs/require.js?version=v2.0.9"></script>
-    <script src="http://cms.yoho167.com/resource/hdjs/dist/static/requirejs/config.js?version=v2.0.9"></script>
-    <link href="http://cms.yoho167.com/resource/css/site.css?version=v2.0.9" rel="stylesheet">
+    <script src="__STATIC__/resource/hdjs/dist/static/requirejs/require.js?version=v2.0.9"></script>
+    <script src="__STATIC__/resource/hdjs/dist/static/requirejs/config.js?version=v2.0.9"></script>
+    <link href="__STATIC__/resource/css/site.css?version=v2.0.9" rel="stylesheet">
     <script>
-        require(['hdjs'], function () {
-            //为异步请求设置CSRF令牌
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
-        })
+        // require(['hdjs'], function () {
+        //     //为异步请求设置CSRF令牌
+        //     $.ajaxSetup({
+        //         headers: {
+        //             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        //         }
+        //     });
+        // })
     </script>
 </head>
 <body class="site">

@@ -43,9 +43,9 @@ class StudentList extends Controller
 
 //        halt($userInfo);
 
-        $userInfo['family_member'] = explode("，",$userInfo['family_member']);
-        $userInfo['resume_1'] = explode("，",$userInfo['resume_1']);
-        $userInfo['resume_2'] = explode("，",$userInfo['resume_2']);
+        $userInfo['family_member'] = explode(",",$userInfo['family_member']);
+        $userInfo['resume_1'] = explode(",",$userInfo['resume_1']);
+        $userInfo['resume_2'] = explode(",",$userInfo['resume_2']);
 
 //        halt($userInfo);
 
